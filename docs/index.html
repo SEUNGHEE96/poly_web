@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='/assets/css/styles.css'>
+    <link href="resources/css/main.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+        .btn-primary {
+            margin-right: 10px;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            padding: 20px 50px;
+        }
+
+        .container-fluid {
+            margin: 20px;
+        }
+
+        .d-flex {
+            margin: 0 auto;
+        }
+
+        .nav-one {
+            display: flex;
+            justify-content: right;
+        }
+
+        .end {
+            height: 5px;
+            color: #012A5E;
+            background-color: #012A5E;
+            text-align: center;
+        }
+
+        .footer {
+            position: relative;
+            height: 150px;
+            background-color: #f8f9fa;
+            color: darkgray;
+            text-align: left;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+
+        <ul class="nav nav-one">
+            <li class="nav-item">
+                <a class="nav-link" href="#">회원가입</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">로그인</a>
+            </li>
+        </ul>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <button type="button" class="btn btn-primary">
+                        ARIWEBTOON
+                    </button>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </nav>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">추천</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">로맨스</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">BL</a>
+            </li>
+        </ul>
+        <hr class="end">
+    </header>
+
+    <main class="main">
+    <section class="upper">
+        <div class="advertisement">
+            <!-- 이미지 슬라이드 부분 -->
+            <div id="slideShow">
+                <img src="resources/images/novel/a1.jpg" alt="" width="900px">
+            </div>
+        </div>
+    </section>
+    <section class="lower">
+        <div class="categoryList">
+            <div class="category">
+                <div class="top">
+                    <div class="title">NEW! 신작</div>
+                    <div id="new_page">1페이지</div>
+                    <div class="btn">
+                        <input type="button" id="newNovelL" value='<'>&nbsp;
+                        <input type="button" id="newNovelR" value='>'>
+                    </div>
+                </div>
+                <div class="bottom" id="newNovel">
+                    <div class="item">
+                        <img src="resources/images/novel/1.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">고결한동맹</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/2.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">나의애니에게</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/3.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">내몸과마음을바쳐</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/4.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">죽은자의사랑을</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="top">
+                    <div class="title">로맨스/로판 BEST</div>
+                    <div id="romance_page">1페이지</div>
+                    <div class="btn">
+                        <input type="button" id="romanceNovelL" value='<'>&nbsp;
+                        <input type="button" id="romanceNovelR" value='>'>
+                    </div>
+                </div>
+                <div class="bottom" id="romanceNovel">
+                    <div class="item">
+                        <img src="resources/images/novel/5.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">계락남편의집착</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/6.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">눈떠보니나으리</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/7.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">흔적도없이</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/8.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">불순한하울링</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="top">
+                    <div class="title">판타지/무협 BEST</div>
+                    <div id="fantasy_page">1페이지</div>
+                    <div class="btn">
+                        <input type="button" id="fantasyNovelL" value='<'>&nbsp;
+                        <input type="button" id="fantasyNovelR" value='>'>
+                    </div>
+                </div>
+                <div class="bottom" id="fantasyNovel">
+                    <div class="item">
+                        <img src="resources/images/novel/9.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">첫사랑에미친대공</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/10.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">중독의시간</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/11.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">걸려들다</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/12.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">나신에피는꽃</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="top">
+                    <div class="title">BL BEST</div>
+                    <div id="BL_page">1페이지</div>
+                    <div class="btn">
+                        <input type="button" id="BLNovelL" value='<'>&nbsp;
+                        <input type="button" id="BLNovelR" value='>'>
+                    </div>
+                </div>
+                <div class="bottom" id="BLNovel">
+                    <div class="item">
+                        <img src="resources/images/novel/13.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">이혼의목적</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/14.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">당신이나를잊은줄</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/15.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">비밀이내게</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="resources/images/novel/16.jpg" alt="X">
+                        <div class="description">
+                            <div class="novel_name">
+                                <a href="/">마치백작부인의</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <div class="footer">
+        <p>이용약관 개인정보 처리방침 청소년보호정책 사업자정보확인</p>
+        <p>Oaprin Corp.</p>
+        <p>🌕ARIWEBTOON🤴</p>
+    </div>
+
+</body>
+
+</html>

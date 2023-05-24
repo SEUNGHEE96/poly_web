@@ -7,8 +7,22 @@ layout : base
         <div class="advertisement">
             <!-- 이미지 슬라이드 부분 -->
             <div id="slideShow">
-                <img src="resources/images/novel/a1.jpg" alt="" width="900px">
+                <ul class="slides">
+                    <li><img src="assets/images/novel/a1.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a2.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a3.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a4.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a5.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a6.jpg" alt="" width="900px"></li>
+                </ul>
+                <p class="controller">
+                    <!-- &lang: 왼쪽 방향 화살표
+                    &rang: 오른쪽 방향 화살표 -->
+                    <span class="prev">&lang;</span>
+                    <span class="next">&rang;</span>
+                </p>
             </div>
+            <script src="assets/js/slideShow.js"></script>
         </div>
     </section>
     <section class="lower">
@@ -23,38 +37,17 @@ layout : base
                     </div>
                 </div>
                 <div class="bottom" id="newNovel">
+                    {% for index in (10..13) %}
+                    {% assign romance = site.data.romance.romance[index] %}
                     <div class="item">
-                        <img src="resources/images/novel/1.jpg" alt="X">
+                        <img src="assets/images/novel/{{romance.id}}.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">고결한동맹</a>
+                                <a href="/">{{ romance.title }}</a>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <img src="resources/images/novel/2.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">나의애니에게</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="resources/images/novel/3.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">내몸과마음을바쳐</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="resources/images/novel/4.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">죽은자의사랑을</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="category">
@@ -67,38 +60,17 @@ layout : base
                     </div>
                 </div>
                 <div class="bottom" id="romanceNovel">
+                    {% for index in (1..4) %}
+                    {% assign romance = site.data.romance.romance[index] %}
                     <div class="item">
-                        <img src="resources/images/novel/5.jpg" alt="X">
+                        <img src="assets/images/novel/{{romance.id}}.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">계락남편의집착</a>
+                                <a href="/">{{ romance.title }}</a>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <img src="resources/images/novel/6.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">눈떠보니나으리</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="resources/images/novel/7.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">흔적도없이</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="resources/images/novel/8.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">불순한하울링</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="category">
@@ -111,38 +83,17 @@ layout : base
                     </div>
                 </div>
                 <div class="bottom" id="fantasyNovel">
+                    {% for index in (1..4) %}
+                    {% assign fantasy = site.data.fantasy.fantasy[index] %}
                     <div class="item">
-                        <img src="resources/images/novel/9.jpg" alt="X">
+                        <img src="assets/images/novel/{{fantasy.id}}.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">첫사랑에미친대공</a>
+                                <a href="/">{{ fantasy.title }}</a>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <img src="resources/images/novel/10.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">중독의시간</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="resources/images/novel/11.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">걸려들다</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="resources/images/novel/12.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">나신에피는꽃</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="category">
@@ -155,38 +106,17 @@ layout : base
                     </div>
                 </div>
                 <div class="bottom" id="BLNovel">
+                    {% for index in (1..4) %}
+                    {% assign bl = site.data.bl.bl[index] %}
                     <div class="item">
-                        <img src="resources/images/novel/13.jpg" alt="X">
+                        <img src="assets/images/novel/{{bl.id}}.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">이혼의목적</a>
+                                <a href="/">{{ bl.title }}</a>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <img src="resources/images/novel/14.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">당신이나를잊은줄</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="resources/images/novel/15.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">비밀이내게</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="resources/images/novel/16.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">마치백작부인의</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

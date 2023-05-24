@@ -1,0 +1,25 @@
+---
+layout: layout2
+---
+
+<!--
+    {% for post in site.data.person.posts %}
+      <h2>{{ post.title }}</h2>
+      <p>Author: {{ post.author }}</p>
+    {% endfor %}
+-->
+
+<!--
+
+    {% assign romance = site.data.romance.romance[0] %}
+    <h2>{{ romance.title }}</h2>
+    <p>Author: {{ romance.author }}</p>
+    
+-->
+
+
+{% for index in (1..4) %}
+    {% assign romance = site.data.romance.romance[index] %}
+    <h2>{{ romance.title }}</h2>
+    <p>{{ romance.author }}</p>
+{% endfor %}

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href='{{ "/assets/css/styles.css" | relative_url }}'>
-    <link href="resources/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 
@@ -57,18 +57,20 @@
 
         <ul class="nav nav-one">
             <li class="nav-item">
-                <a class="nav-link" href="#">회원가입</a>
+                <a class="nav-link" href="signin">회원가입</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">로그인</a>
+                <a class="nav-link" href="login">로그인</a>
             </li>
         </ul>
         <nav class="navbar">
             <div class="container-fluid">
                 <form class="d-flex" role="search">
-                    <button type="button" class="btn btn-primary">
-                        ARIWEBTOON
-                    </button>
+                    <a href="/">
+                        <button type="button" class="btn btn-primary">
+                            ARIWEBTOON
+                        </button>
+                    </a>
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 </form>
             </div>

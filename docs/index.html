@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href='/assets/css/styles.css'>
-    <link href="resources/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 
@@ -57,18 +57,20 @@
 
         <ul class="nav nav-one">
             <li class="nav-item">
-                <a class="nav-link" href="#">회원가입</a>
+                <a class="nav-link" href="signin">회원가입</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">로그인</a>
+                <a class="nav-link" href="login">로그인</a>
             </li>
         </ul>
         <nav class="navbar">
             <div class="container-fluid">
                 <form class="d-flex" role="search">
-                    <button type="button" class="btn btn-primary">
-                        ARIWEBTOON
-                    </button>
+                    <a href="/">
+                        <button type="button" class="btn btn-primary">
+                            ARIWEBTOON
+                        </button>
+                    </a>
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 </form>
             </div>
@@ -92,8 +94,22 @@
         <div class="advertisement">
             <!-- 이미지 슬라이드 부분 -->
             <div id="slideShow">
-                <img src="resources/images/novel/a1.jpg" alt="" width="900px">
+                <ul class="slides">
+                    <li><img src="assets/images/novel/a1.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a2.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a3.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a4.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a5.jpg" alt="" width="900px"></li>
+                    <li><img src="assets/images/novel/a6.jpg" alt="" width="900px"></li>
+                </ul>
+                <p class="controller">
+                    <!-- &lang: 왼쪽 방향 화살표
+                    &rang: 오른쪽 방향 화살표 -->
+                    <span class="prev">&lang;</span>
+                    <span class="next">&rang;</span>
+                </p>
             </div>
+            <script src="assets/js/slideShow.js"></script>
         </div>
     </section>
     <section class="lower">
@@ -108,38 +124,47 @@
                     </div>
                 </div>
                 <div class="bottom" id="newNovel">
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/1.jpg" alt="X">
+                        <img src="assets/images/novel/11.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">고결한동맹</a>
+                                <a href="/">걸려들다</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/2.jpg" alt="X">
+                        <img src="assets/images/novel/12.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">나의애니에게</a>
+                                <a href="/">나신에 피는 꽃</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/3.jpg" alt="X">
+                        <img src="assets/images/novel/13.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">내몸과마음을바쳐</a>
+                                <a href="/">이혼의 목적</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/4.jpg" alt="X">
+                        <img src="assets/images/novel/14.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">죽은자의사랑을</a>
+                                <a href="/">당신이 나를 잊은 줄 알았다</a>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="category">
@@ -152,38 +177,47 @@
                     </div>
                 </div>
                 <div class="bottom" id="romanceNovel">
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/5.jpg" alt="X">
+                        <img src="assets/images/novel/2.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">계락남편의집착</a>
+                                <a href="/">나의 애니에게</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/6.jpg" alt="X">
+                        <img src="assets/images/novel/3.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">눈떠보니나으리</a>
+                                <a href="/">내 몸과 마음을 바쳐</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/7.jpg" alt="X">
+                        <img src="assets/images/novel/4.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">흔적도없이</a>
+                                <a href="/">죽은 자의 사랑을 받고 있습니다</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/8.jpg" alt="X">
+                        <img src="assets/images/novel/5.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">불순한하울링</a>
+                                <a href="/">계략 남편의 집착에 걸려들었다</a>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="category">
@@ -196,38 +230,47 @@
                     </div>
                 </div>
                 <div class="bottom" id="fantasyNovel">
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/9.jpg" alt="X">
+                        <img src="assets/images/novel/50.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">첫사랑에미친대공</a>
+                                <a href="/">십파일방</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/10.jpg" alt="X">
+                        <img src="assets/images/novel/51.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">중독의시간</a>
+                                <a href="/">회귀한 영주는 쉬고 싶다</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/11.jpg" alt="X">
+                        <img src="assets/images/novel/52.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">걸려들다</a>
+                                <a href="/">삼국지 공손찬전: 백마장사의 위용</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/12.jpg" alt="X">
+                        <img src="assets/images/novel/53.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">나신에피는꽃</a>
+                                <a href="/">멸문의가 소가주</a>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="category">
@@ -240,38 +283,47 @@
                     </div>
                 </div>
                 <div class="bottom" id="BLNovel">
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/13.jpg" alt="X">
+                        <img src="assets/images/novel/75.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">이혼의목적</a>
+                                <a href="/">오니</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/14.jpg" alt="X">
+                        <img src="assets/images/novel/76.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">당신이나를잊은줄</a>
+                                <a href="/">록 인(Locked In)</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/15.jpg" alt="X">
+                        <img src="assets/images/novel/77.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">비밀이내게</a>
+                                <a href="/">경이로운 세계</a>
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="item">
-                        <img src="resources/images/novel/16.jpg" alt="X">
+                        <img src="assets/images/novel/78.jpg" alt="X">
                         <div class="description">
                             <div class="novel_name">
-                                <a href="/">마치백작부인의</a>
+                                <a href="/">살인마</a>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 ---
 layout : base
 ---
-
+<link href="assets/css/main.css" rel="stylesheet">
 <main class="main">
     <section class="upper">
         <div class="advertisement">
@@ -17,19 +17,14 @@ layout : base
                 </ul>
                 <p class="controller">
                     <!-- &lang: 왼쪽 방향 화살표
-                    &rang: 오른쪽 방향 화살표 -->
+                        &rang: 오른쪽 방향 화살표 -->
                     <span class="prev">&lang;</span>
                     <span class="next">&rang;</span>
                 </p>
             </div>
-            <script src="assets/js/slideShow.js"></script>
-            <script>
-
-            </script>
 
         </div>
     </section>
-    <script src="assets/js/main2.js"></script>
     <section class="lower">
         <div class="categoryList">
             <div class="category">
@@ -43,7 +38,7 @@ layout : base
                 </div>
                 <div class="bottom" id="newNovel">
                     {% for index in (10..13) %}
-                    {% assign romance = site.data.romance.romance[index] %}
+                    {% assign romance = site.data.romance[index] %}
                     <div class="item">
                         <img src="assets/images/novel/{{romance.id}}.jpg" alt="X">
                         <div class="description">
@@ -60,22 +55,11 @@ layout : base
                     <div class="title">로맨스/로판 BEST</div>
                     <div id="romance_page">1페이지</div>
                     <div class="btn">
-                        <input type="button" id="romanceNovelL" value='<'>&nbsp;
-                        <input type="button" id="romanceNovelR" value='>'>
+                        <input type="button" id="romanceNovelL" value='<' onclick="romanceL_click()">&nbsp;
+                        <input type="button" id="romanceNovelR" value='>' onclick="romanceR_click()">
                     </div>
                 </div>
                 <div class="bottom" id="romanceNovel">
-                    {% for index in (1..4) %}
-                    {% assign romance = site.data.romance.romance[index] %}
-                    <div class="item">
-                        <img src="assets/images/novel/{{romance.id}}.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">{{ romance.title }}</a>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
             <div class="category">
@@ -83,22 +67,11 @@ layout : base
                     <div class="title">판타지/무협 BEST</div>
                     <div id="fantasy_page">1페이지</div>
                     <div class="btn">
-                        <input type="button" id="fantasyNovelL" value='<'>&nbsp;
-                        <input type="button" id="fantasyNovelR" value='>'>
+                        <input type="button" id="fantasyNovelL" value='<' onclick="fantasyL_click()">&nbsp;
+                        <input type="button" id="fantasyNovelR" value='>' onclick="fantasyR_click()">
                     </div>
                 </div>
                 <div class="bottom" id="fantasyNovel">
-                    {% for index in (1..4) %}
-                    {% assign fantasy = site.data.fantasy.fantasy[index] %}
-                    <div class="item">
-                        <img src="assets/images/novel/{{fantasy.id}}.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">{{ fantasy.title }}</a>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
             <div class="category">
@@ -106,24 +79,14 @@ layout : base
                     <div class="title">BL BEST</div>
                     <div id="BL_page">1페이지</div>
                     <div class="btn">
-                        <input type="button" id="BLNovelL" value='<'>&nbsp;
-                        <input type="button" id="BLNovelR" value='>'>
+                        <input type="button" id="BLNovelL" value='<' onclick="blL_click()">&nbsp;
+                        <input type="button" id="BLNovelR" value='>' onclick="blR_click()">
                     </div>
                 </div>
                 <div class="bottom" id="BLNovel">
-                    {% for index in (1..4) %}
-                    {% assign bl = site.data.bl.bl[index] %}
-                    <div class="item">
-                        <img src="assets/images/novel/{{bl.id}}.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">{{ bl.title }}</a>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
     </section>
 </main>
+<script src="assets/js/main.js"></script>

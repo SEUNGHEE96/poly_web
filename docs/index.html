@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href='/assets/css/styles.css'>
-    <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/signin.css" rel="stylesheet">
-    <script src="/src/assets/js/jquery-3.7.0.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 
@@ -91,7 +89,8 @@
         <hr class="end">
     </header>
 
-    <main class="main">
+    <link href="assets/css/main.css" rel="stylesheet">
+<main class="main">
     <section class="upper">
         <div class="advertisement">
             <!-- 이미지 슬라이드 부분 -->
@@ -106,19 +105,14 @@
                 </ul>
                 <p class="controller">
                     <!-- &lang: 왼쪽 방향 화살표
-                    &rang: 오른쪽 방향 화살표 -->
+                        &rang: 오른쪽 방향 화살표 -->
                     <span class="prev">&lang;</span>
                     <span class="next">&rang;</span>
                 </p>
             </div>
-            <script src="assets/js/slideShow.js"></script>
-            <script>
-
-            </script>
 
         </div>
     </section>
-    <script src="assets/js/main2.js"></script>
     <section class="lower">
         <div class="categoryList">
             <div class="category">
@@ -179,52 +173,11 @@
                     <div class="title">로맨스/로판 BEST</div>
                     <div id="romance_page">1페이지</div>
                     <div class="btn">
-                        <input type="button" id="romanceNovelL" value='<'>&nbsp;
-                        <input type="button" id="romanceNovelR" value='>'>
+                        <input type="button" id="romanceNovelL" value='<' onclick="romanceL_click()">&nbsp;
+                        <input type="button" id="romanceNovelR" value='>' onclick="romanceR_click()">
                     </div>
                 </div>
                 <div class="bottom" id="romanceNovel">
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/2.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">나의 애니에게</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/3.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">내 몸과 마음을 바쳐</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/4.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">죽은 자의 사랑을 받고 있습니다</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/5.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">계략 남편의 집착에 걸려들었다</a>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
             <div class="category">
@@ -232,52 +185,11 @@
                     <div class="title">판타지/무협 BEST</div>
                     <div id="fantasy_page">1페이지</div>
                     <div class="btn">
-                        <input type="button" id="fantasyNovelL" value='<'>&nbsp;
-                        <input type="button" id="fantasyNovelR" value='>'>
+                        <input type="button" id="fantasyNovelL" value='<' onclick="fantasyL_click()">&nbsp;
+                        <input type="button" id="fantasyNovelR" value='>' onclick="fantasyR_click()">
                     </div>
                 </div>
                 <div class="bottom" id="fantasyNovel">
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/50.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">십파일방</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/51.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">회귀한 영주는 쉬고 싶다</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/52.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">삼국지 공손찬전: 백마장사의 위용</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/53.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">멸문의가 소가주</a>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
             <div class="category">
@@ -285,57 +197,17 @@
                     <div class="title">BL BEST</div>
                     <div id="BL_page">1페이지</div>
                     <div class="btn">
-                        <input type="button" id="BLNovelL" value='<'>&nbsp;
-                        <input type="button" id="BLNovelR" value='>'>
+                        <input type="button" id="BLNovelL" value='<' onclick="blL_click()">&nbsp;
+                        <input type="button" id="BLNovelR" value='>' onclick="blR_click()">
                     </div>
                 </div>
                 <div class="bottom" id="BLNovel">
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/75.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">오니</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/76.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">록 인(Locked In)</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/77.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">경이로운 세계</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="item">
-                        <img src="assets/images/novel/78.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">살인마</a>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </div>
     </section>
 </main>
+<script src="assets/js/main.js"></script>
 
     <div class="footer">
         <p>이용약관 개인정보 처리방침 청소년보호정책 사업자정보확인</p>

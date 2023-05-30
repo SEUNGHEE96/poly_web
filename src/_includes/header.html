@@ -1,12 +1,26 @@
-헤더
-<ul>
-    <li>
-        <a href="./about">about</a>
+<link href="assets/css/header.css" rel="stylesheet">
+{% include nav.html %}
+<nav class="navbar">
+    <div class="container-fluid">
+        <form class="d-flex" role="search">
+            <a href="/">
+                <button type="button" class="btn btn-primary">
+                    ARIWEBTOON
+                </button>
+            </a>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+    </div>
+</nav>
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">추천</a>
     </li>
-    <li>
-        <a href="/">home</a>
+    <li class="nav-item">
+        <a class="nav-link" href="#">로맨스</a>
     </li>
-    <li>
-        <a href="./company">company</a>
+    <li class="nav-item">
+        <a class="nav-link" href="#">BL</a>
     </li>
 </ul>
+<hr class="end">

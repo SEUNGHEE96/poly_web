@@ -52,10 +52,9 @@ li {
     list-style-type: none;
 }
 
-li img{
+li img {
     width: 900px;
 }
-
 
 /* 보여줄 구간의 높이와 넓이 설정 */
 #slideShow {
@@ -67,7 +66,6 @@ li img{
     hidden으로 숨겨줘야됨*/
 }
 
-
 .slides {
     position: relative;
     left: 0px;
@@ -75,14 +73,6 @@ li img{
     transition: left 0.8s ease-out;
     /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
 }
-
-/*
-  첫 번째 슬라이드 가운데에 정렬하기위해
-  첫번째 슬라이드만 margin-left조정
-  .slides li:first-child{
-    margin-left: 100px;
-  }
-  */
 
 /* 슬라이드들 옆으로 정렬 */
 .slides li:not(:last-child) {

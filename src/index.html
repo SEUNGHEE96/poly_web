@@ -1,92 +1,67 @@
 ---
-layout : base
+layout : upper
 ---
-<link href="assets/css/main.css" rel="stylesheet">
-<main class="main">
-    <section class="upper">
-        <div class="advertisement">
-            <!-- 이미지 슬라이드 부분 -->
-            <div id="slideShow">
-                <ul class="slides">
-                    <li><img src="assets/images/novel/a1.jpg" alt=""></li>
-                    <li><img src="assets/images/novel/a2.jpg" alt=""></li>
-                    <li><img src="assets/images/novel/a3.jpg" alt=""></li>
-                    <li><img src="assets/images/novel/a4.jpg" alt=""></li>
-                    <li><img src="assets/images/novel/a5.jpg" alt=""></li>
-                    <li><img src="assets/images/novel/a6.jpg" alt=""></li>
-                </ul>
-                <p class="controller">
-                    <!-- &lang: 왼쪽 방향 화살표
-                        &rang: 오른쪽 방향 화살표 -->
-                    <span class="prev">&lang;</span>
-                    <span class="next">&rang;</span>
-                </p>
-            </div>
 
-        </div>
-    </section>
-    <section class="lower">
-        <div class="categoryList">
-            <div class="category">
-                <div class="top">
-                    <div class="title">NEW! 신작</div>
-                    <div id="new_page">1페이지</div>
-                    <div class="btn">
-                        <input type="button" id="newNovelL" value='<'>&nbsp;
-                        <input type="button" id="newNovelR" value='>'>
-                    </div>
+<section class="lower">
+    <div class="categoryList">
+        <div class="category">
+            <div class="top">
+                <div class="title">NEW! 신작</div>
+                <div id="new_page">1페이지</div>
+                <div class="btn">
+                    <input type="button" id="newNovelL" value='<'>&nbsp;
+                    <input type="button" id="newNovelR" value='>'>
                 </div>
-                <div class="bottom" id="newNovel">
-                    {% for index in (10..13) %}
-                    {% assign romance = site.data.romance[index] %}
-                    <div class="item">
-                        <img src="assets/images/novel/{{romance.id}}.jpg" alt="X">
-                        <div class="description">
-                            <div class="novel_name">
-                                <a href="/">{{ romance.title }}</a>
-                            </div>
+            </div>
+            <div class="bottom" id="newNovel">
+                {% for index in (10..13) %}
+                {% assign romance = site.data.romance[index] %}
+                <div class="item">
+                    <img src="assets/images/novel/{{romance.id}}.jpg" alt="X">
+                    <div class="description">
+                        <div class="novel_name">
+                            <a href="/">{{ romance.title }}</a>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
-            </div>
-            <div class="category">
-                <div class="top">
-                    <div class="title">로맨스/로판 BEST</div>
-                    <div id="romance_page">1페이지</div>
-                    <div class="btn">
-                        <input type="button" id="romanceNovelL" value='<' onclick="romanceL_click()">&nbsp;
-                        <input type="button" id="romanceNovelR" value='>' onclick="romanceR_click()">
-                    </div>
-                </div>
-                <div class="bottom" id="romanceNovel">
-                </div>
-            </div>
-            <div class="category">
-                <div class="top">
-                    <div class="title">판타지/무협 BEST</div>
-                    <div id="fantasy_page">1페이지</div>
-                    <div class="btn">
-                        <input type="button" id="fantasyNovelL" value='<' onclick="fantasyL_click()">&nbsp;
-                        <input type="button" id="fantasyNovelR" value='>' onclick="fantasyR_click()">
-                    </div>
-                </div>
-                <div class="bottom" id="fantasyNovel">
-                </div>
-            </div>
-            <div class="category">
-                <div class="top">
-                    <div class="title">BL BEST</div>
-                    <div id="BL_page">1페이지</div>
-                    <div class="btn">
-                        <input type="button" id="BLNovelL" value='<' onclick="blL_click()">&nbsp;
-                        <input type="button" id="BLNovelR" value='>' onclick="blR_click()">
-                    </div>
-                </div>
-                <div class="bottom" id="BLNovel">
-                </div>
+                {% endfor %}
             </div>
         </div>
-    </section>
-</main>
-<script src="assets/js/main.js"></script>
+        <div class="category">
+            <div class="top">
+                <div class="title">로맨스/로판 BEST</div>
+                <div id="romance_page">1페이지</div>
+                <div class="btn">
+                    <input type="button" id="romanceNovelL" value='<' onclick="romanceL_click()">&nbsp;
+                    <input type="button" id="romanceNovelR" value='>' onclick="romanceR_click()">
+                </div>
+            </div>
+            <div class="bottom" id="romanceNovel">
+            </div>
+        </div>
+        <div class="category">
+            <div class="top">
+                <div class="title">판타지/무협 BEST</div>
+                <div id="fantasy_page">1페이지</div>
+                <div class="btn">
+                    <input type="button" id="fantasyNovelL" value='<' onclick="fantasyL_click()">&nbsp;
+                    <input type="button" id="fantasyNovelR" value='>' onclick="fantasyR_click()">
+                </div>
+            </div>
+            <div class="bottom" id="fantasyNovel">
+            </div>
+        </div>
+        <div class="category">
+            <div class="top">
+                <div class="title">BL BEST</div>
+                <div id="BL_page">1페이지</div>
+                <div class="btn">
+                    <input type="button" id="BLNovelL" value='<' onclick="blL_click()">&nbsp;
+                    <input type="button" id="BLNovelR" value='>' onclick="blR_click()">
+                </div>
+            </div>
+            <div class="bottom" id="BLNovel">
+            </div>
+        </div>
+    </div>
+</section>

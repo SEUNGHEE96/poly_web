@@ -1,0 +1,32 @@
+---
+layout : base
+---
+<link href="assets/css/main.css" rel="stylesheet">
+<main class="main">
+    <section class="upper">
+        <div class="advertisement">
+            <!-- 이미지 슬라이드 부분 -->
+            <div id="slideShow">
+                <ul class="slides">
+                    <li><img src="assets/images/novel/a1.jpg" alt=""></li>
+                    <li><img src="assets/images/novel/a2.jpg" alt=""></li>
+                    <li><img src="assets/images/novel/a3.jpg" alt=""></li>
+                    <li><img src="assets/images/novel/a4.jpg" alt=""></li>
+                    <li><img src="assets/images/novel/a5.jpg" alt=""></li>
+                    <li><img src="assets/images/novel/a6.jpg" alt=""></li>
+                </ul>
+                <p class="controller">
+                    <!-- &lang: 왼쪽 방향 화살표
+                        &rang: 오른쪽 방향 화살표 -->
+                    <span class="prev">&lang;</span>
+                    <span class="next">&rang;</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    {{content}}
+    
+</main>
+<script src="assets/js/main.js"></script>

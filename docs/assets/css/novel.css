@@ -1,7 +1,23 @@
+.content {
+    padding: 30px;
+    margin: auto;
+    background-color: white;
+}
+
 #detail {
     width: 63%;
     height: 430px;
     float: right;
+}
+
+#title {
+    width: 37%;
+}
+
+#novelimg {
+    float: center;
+    margin: 0 auto;
+    width: 250px;
 }
 
 #check {
@@ -24,7 +40,7 @@
 }
 
 /* 모래 아이콘 */
-#sand {
+#cookie {
     width: 20px;
     height: 18px;
 }
@@ -43,12 +59,6 @@
     width: 25%;
     height: 425px;
     float: left;
-}
-
-/* 좋아요 버튼 */
-#like {
-    width: 30px;
-    height: 30px;
 }
 
 /* 좋아요 이미지*/
@@ -79,7 +89,6 @@ b {
 #show {
     width: 44px;
     text-align: center;
-
     color: red;
 }
 
@@ -90,11 +99,11 @@ b {
 }
 
 /* 장바구니, 구매 버튼 */
-#cart,
-#buy {
+#novelbtn {
     border-radius: 5px;
     border-color: #f0f0f0;
     background: #e3e3e3;
+    text-align: right;
 }
 
 #xxx {
@@ -108,10 +117,6 @@ b {
 
 #second_tbl_tr {
     border: 1px solid grey;
-}
-
-#review_submit {
-    text-align: right;
 }
 
 #edit {

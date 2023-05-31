@@ -1,17 +1,9 @@
-body {
-    width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-
 .main {
-    width: 1100px;
     height: auto;
     position: relative;
     margin: 0 auto;
     background-color: #f8f9fa;
 }
-
 
 .main .upper {
     position: relative;
@@ -136,6 +128,8 @@ li img {
 
 .main .lower .categoryList {
     width: 90%;
+    display: flex;
+    flex-direction: column;
 }
 
 .main .lower .categoryList .category {
@@ -153,6 +147,11 @@ li img {
     font-size: 17px;
     justify-content: space-between;
     color: #012A5E;
+}
+
+.main .lower .categoryList .category .bottom {
+    display: flex;
+    flex-direction: row;
 }
 
 .main .lower .categoryList .category .top .btn {

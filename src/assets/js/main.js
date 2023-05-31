@@ -26,7 +26,7 @@ function renderHTML() {
                 <img src="assets/images/novel/${content.id}.jpg" alt="X">
                     <div class="description">
                         <div class="novel_name">
-                            <a href="/">${content.title}</a>
+                            <a href="/novel?novelid=${content.id}">${content.title}</a>
                         </div>
                     </div>
             </div>
@@ -81,7 +81,7 @@ function renderHTML2() {
                 <img src="assets/images/novel/${content.id}.jpg" alt="X">
                     <div class="description">
                         <div class="novel_name">
-                            <a href="/">${content.title}</a>
+                            <a href="/novel?novelid=${content.id}">${content.title}</a>
                         </div>
                     </div>
             </div>
@@ -135,7 +135,7 @@ function renderHTML3() {
                 <img src="assets/images/novel/${content.id}.jpg" alt="X">
                     <div class="description">
                         <div class="novel_name">
-                            <a href="/">${content.title}</a>
+                            <a href="/novel?novelid=${content.id}">${content.title}</a>\
                         </div>
                     </div>
             </div>

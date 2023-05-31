@@ -2,7 +2,6 @@
 layout : base
 ---
 
-<link href="assets/css/signin.css" rel="stylesheet">
 <body class="authentication-bg" data-layout-config='{"darkMode":false}'>
     <script src="assets/js/signin.js"></script>
     <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5">
@@ -28,10 +27,11 @@ layout : base
                                     <label for="fullname" class="form-label">이름</label>
                                     <input class="form-control" type="text" id="fullname" placeholder="이름을 입력하세요"
                                         required>
-                                    <button id="idCheckBtn" onclick="idCheck()"><span
-                                            class="badge bg-primary rounded-pill">유효성 검사</span></button>
                                     <p id="idError" style="display: none;">특수문자를 넣을 수 없습니다.</p>
                                     <p id="idCorret" style="display: none;">유효한 아이디입니다.</p>
+                                    <button id="idCheckBtn" onclick="idCheck()" style="float: right;"
+                                        class="badge bg-primary rounded-pill">
+                                        유효성 검사</button>
                                 </div>
 
                                 <div class="mb-3">

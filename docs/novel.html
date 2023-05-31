@@ -34,154 +34,96 @@
 </nav>
 <ul class="nav nav-pills">
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">추천</a>
+        <a class="nav-link active" aria-current="page" href="#" onclick="none()">추천</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">로맨스</a>
+        <a class="nav-link" href="#" onclick="none()">로맨스</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">BL</a>
+        <a class="nav-link" href="#" onclick="none()">BL</a>
     </li>
 </ul>
 <hr class="end">
+<script src="assets/js/header.js"></script>
     </header>
 
-    <link href="assets/css/novel.css" rel="stylesheet">
-<script>
-    function getParams() {
-        var url = window.location.search.replace('?', '');
-        var params = {};
-        var urlArray = url.split('&');
-
-        for (var i in urlArray) {
-            var param = urlArray[i].split('=');
-            params[param[0]] = param[1];
-        }
-        return params;
+    <style>
+    #wrapper {
+        max-width: 1200px; 
+        margin: 0 auto; 
     }
+</style>
 
-    const params = getParams();
-    console.log(params['novelid']);
-
-    let xhr = new XMLHttpRequest();
-    xhr.open("GET", "assets/json/romance.json");
-    xhr.send();
-
-    xhr.onreadystatechange = function (event) {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            romances = JSON.parse(xhr.responseText);
-            renderHTML();
-        }
-    };
-
-    function renderHTML() {
-        let htmlString = "";
-        for (let i = romance_count * 4 - 4; i < romance_count * 4; i++) {
-            if (i >= romances.length) {
-                break; // 더 이상 표시할 데이터가 없으면 종료
-            }
-            let content = romances[i];
-            htmlString += `
-            <div class="item">
-                <img src="assets/images/novel/${content.id}.jpg" alt="X">
-                    <div class="description">
-                        <div class="novel_name">
-                            <a href="/">${content.title}</a>
-                        </div>
-                    </div>
-            </div>
-            `;
-        }
-        document.getElementById("romanceNovel").innerHTML = htmlString;
-    };
-</script>
-
+<div id="wrapper">
+    <link href="assets/css/novel.css" rel="stylesheet">
+<script src="assets/js/novel.js"></script>
 <body>
-    <img id="title" src="assets/images/novel/11.jpg" width="100px">
-    <!-- 웹소설 설명란 -->
-    <div id="detail">
-        <h1> json:title </h1>
-        <b>연재중&nbsp;&nbsp;|&nbsp;&nbsp;작가 json:author&nbsp;&nbsp;</b><br>
-        <b>날짜&nbsp;&nbsp;|
-            &nbsp;&nbsp;조회수 100&nbsp;&nbsp;|
-            &nbsp;&nbsp;좋아요&nbsp;&nbsp;<button type="button" id="like" name="like"><img id="liked_img"
-                    src="assets/images/liked.png"></button></b>
-        <hr /><br>
-        json:description
-        <br><br>
-        <div>
-            <h4 class="BookDetailNotice_List_Header BookDetailNotice_List_Header-notices" id="h">
-                &lt;공지&gt;</h4>
+    <div class="content">
+        <div id="json">
         </div>
-        <div>
-            본 작품은 12세 미만의 청소년이 열람하기에 부적절한 내용을 포함하고 있습니다. 보호자의 지도 하에 작품을 감상해주시기 바랍니다.</div>
 
-        <br>
-        <hr /><br>
-        <b>1화 소장: 쿠키 2개 대여 : 쿠키 1개 <img id="sand" src="resources/images/sand.png"></b>
-    </div>
+        <div id="blank" style="clear:both;"></div>
+        <!-- 에피소드 목록 -->
+        <h4>총 회차 1화</h4>
 
-    <div id="blank" style="clear:both;"></div>
-    <!-- 에피소드 목록 -->
-    <h4>총 회차 ${cnt}화</h4>
-
-    <table>
-        <tr id="first_tr">
-            <td style="width:55px;">회차</td>
-            <td style="width:70%;">제목</td>
-            <td id="check"><input type="checkbox" id="all" name="all"></td>
-            <td>가격</td>
-        </tr>
-        <!-- 에피소드 출력 -->
-        <c:forEach items="${list}" var="epi">
-            <tr id="second_tr">
-                <td>1화</td>
-                <td>1화 제목</td>
-                <td>
-                    <input type="checkbox" name="check" value="${epi.id}">
-                </td>
-                <td>
-                    쿠키 2개
-                </td>
+        <table>
+            <tr id="first_tr">
+                <td style="width:55px;">회차</td>
+                <td style="width:70%;">제목</td>
+                <td id="check"><input type="checkbox" id="all" name="all"></td>
+                <td>가격</td>
             </tr>
-        </c:forEach>
-    </table><br>
+            <!-- 에피소드 출력 -->
+            <c:forEach items="${list}" var="epi">
+                <tr id="second_tr">
+                    <td>1화</td>
+                    <td>1화 제목</td>
+                    <td>
+                        <input type="checkbox" name="check" value="${epi.id}">
+                    </td>
+                    <td>
+                        쿠키 2개
+                    </td>
+                </tr>
+            </c:forEach>
+        </table><br>
 
-    <!-- 장바구니, 구매 버튼 -->
-    <div id="btn">
-        <input type="submit" value="장바구니" id="cart" name="cart">
-        <input type="submit" value="소장하기" id="buy" name="buy"><br><br>
-    </div>
+        <!-- 장바구니, 구매 버튼 -->
+        <div id="btn">
+            <input type="submit" value="장바구니" id="novelbtn" name="cart">
+            <input type="submit" value="소장하기" id="novelbtn" name="buy"><br><br>
+        </div>
 
-    <!-- 페이징 -->
-    <div id="page">
-        <a href="oneNovelPage?novelid=11&page=1">1페이지</a>
-    </div>
+        <!-- 페이징 -->
+        <div id="page">
+            <a href="/">1페이지</a>
+        </div>
 
-    <div id="review_title">리뷰창</div>
-    <table>
-        <tr>
-            <td>작성자</td>
-            <td>내용</td>
-            <td>작성시간</td>
-        </tr>
-        <tr>
-            <td>dd</td>
-            <td>소설 재밌다.</td>
-            <td>2023.01.27 11:39</td>
-        </tr>
-        <div>
+        <div id="review_title">리뷰창</div>
+        <table>
             <tr>
-                <td></td>
-                <td id="edit">
-                    <textarea id="input_review" cols="110" rows="3"></textarea>
-                </td>
-                <td><input type="submit" value="리뷰작성" id="review_submit"></td>
+                <td>작성자</td>
+                <td>내용</td>
+                <td>작성시간</td>
             </tr>
-        </div>
-    </table>
-
+            <tr class="secondtr">
+                <td>dd</td>
+                <td>소설 재밌다.</td>
+                <td>2023.01.27 11:39</td>
+            </tr>
+            <div>
+                <tr>
+                    <td id="edit" colspan="2">
+                        <textarea id="input_review" cols="70" rows="2"></textarea>
+                    </td>
+                    <td><input type="submit" value="리뷰작성" id="novelbtn"></td>
+                </tr>
+            </div>
+        </table>
+    </div>
 </body>
+</div>
+
 
     <div class="footer">
         <p>이용약관 개인정보 처리방침 청소년보호정책 사업자정보확인</p>

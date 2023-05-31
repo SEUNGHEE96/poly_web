@@ -57,15 +57,17 @@
 <div id="wrapper">
     <link href="assets/css/novel.css" rel="stylesheet">
 <script src="assets/js/novel.js"></script>
+
 <body>
     <div class="content">
         <div id="json">
         </div>
 
-        <div id="blank" style="clear:both;"></div>
         <!-- 에피소드 목록 -->
-        <h4>총 회차 1화</h4>
-
+        <div id="blank">
+            <h4>총 회차 1화</h4>
+        </div>
+        
         <table>
             <tr id="first_tr">
                 <td style="width:55px;">회차</td>
@@ -74,18 +76,16 @@
                 <td>가격</td>
             </tr>
             <!-- 에피소드 출력 -->
-            <c:forEach items="${list}" var="epi">
-                <tr id="second_tr">
-                    <td>1화</td>
-                    <td>1화 제목</td>
-                    <td>
-                        <input type="checkbox" name="check" value="${epi.id}">
-                    </td>
-                    <td>
-                        쿠키 2개
-                    </td>
-                </tr>
-            </c:forEach>
+            <tr id="second_tr">
+                <td>1화</td>
+                <td>1화 제목</td>
+                <td>
+                    <input type="checkbox" name="check">
+                </td>
+                <td>
+                    쿠키 2개
+                </td>
+            </tr>
         </table><br>
 
         <!-- 장바구니, 구매 버튼 -->

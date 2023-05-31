@@ -36,8 +36,9 @@ function renderHTML() {
         <!-- 웹소설 설명란 -->
         <div id="detail">
             <h1>${content.title}</h1>
-            <b>연재중&nbsp;&nbsp;|&nbsp;&nbsp;작가 ${content.author}&nbsp;&nbsp;</b><br>
-            <b>날짜 | <span id="likenum">조회수 ${liked}</span> | 좋아요 <button type="button" name="like" onclick="like()"><img id="liked_img" src="assets/images/liked.png"></button></b>
+            <b>연재중 | 작가 ${content.author}
+            <br/>
+            날짜 | <div id="likenum">조회수 ${liked}</div> | 좋아요 <button type="button" name="like" onclick="like()"><img id="liked_img" src="assets/images/liked.png"></button></b>
             
             <hr/>
             <div class="description">

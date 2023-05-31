@@ -4,24 +4,51 @@
     background-color: white;
 }
 
+#json {
+    display: flex;
+    flex-direction: row;
+}
+
 #detail {
     width: 63%;
     height: 430px;
-    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+#novelimg {
+    margin: 0 auto;
+    width: 250px;
 }
 
 #title {
     width: 37%;
 }
 
-#novelimg {
-    float: center;
-    margin: 0 auto;
-    width: 250px;
+#likenum {
+    display: contents;
+}
+
+/* 좋아요 이미지*/
+#liked_img {
+    width: 20px;
+    height: 20px;
 }
 
 #check {
     width: 53px;
+}
+
+#blank {
+    clear: both;
+    margin-top: 20px;
+}
+
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
 }
 
 #first_tr {
@@ -33,16 +60,8 @@
     height: 32px;
 }
 
-#page {
-    width: 100%;
-    height: 30px;
-    text-align: center;
-}
-
-/* 모래 아이콘 */
-#cookie {
-    width: 20px;
-    height: 18px;
+#check {
+    flex-basis: 20px;
 }
 
 #btn {
@@ -51,28 +70,13 @@
     text-align: right;
 }
 
-#b2 {
-    color: #055375;
-}
-
-#title {
-    width: 25%;
-    height: 425px;
-    float: left;
-}
-
-/* 좋아요 이미지*/
-#liked_img {
-    width: 21px;
-    height: 25px;
-}
-
-/* 소설목록 테이블 */
-table {
-    border: 1px solid grey;
-    border-collapse: collapse;
-    width: 100%;
+#page {
     text-align: center;
+}
+
+#cookie {
+    width: 20px;
+    height: 18px;
 }
 
 b {
@@ -112,6 +116,8 @@ b {
 
 #review_title {
     margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     text-align: left;
 }
 

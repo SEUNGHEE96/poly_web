@@ -1,0 +1,119 @@
+#detail {
+    width: 63%;
+    height: 430px;
+    float: right;
+}
+
+#check {
+    width: 53px;
+}
+
+#first_tr {
+    border: 1px solid grey;
+    background-color: #F7F5EB;
+}
+
+#second_tr {
+    height: 32px;
+}
+
+#page {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+/* 모래 아이콘 */
+#sand {
+    width: 20px;
+    height: 18px;
+}
+
+#btn {
+    width: auto;
+    height: auto;
+    text-align: right;
+}
+
+#b2 {
+    color: #055375;
+}
+
+#title {
+    width: 25%;
+    height: 425px;
+    float: left;
+}
+
+/* 좋아요 버튼 */
+#like {
+    width: 30px;
+    height: 30px;
+}
+
+/* 좋아요 이미지*/
+#liked_img {
+    width: 21px;
+    height: 25px;
+}
+
+/* 소설목록 테이블 */
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+b {
+    color: #012A5E;
+}
+
+/* 공지 글 */
+#h {
+    width: 77px;
+    text-align: center;
+}
+
+/* 접은 글 */
+#show {
+    width: 44px;
+    text-align: center;
+
+    color: red;
+}
+
+/* 공지 빨간색 칸 디자인*/
+.BookDetailNotice_List_Header-notices {
+    background: #fce8e6;
+    color: #ed6d5e;
+}
+
+/* 장바구니, 구매 버튼 */
+#cart,
+#buy {
+    border-radius: 5px;
+    border-color: #f0f0f0;
+    background: #e3e3e3;
+}
+
+#xxx {
+    color: red;
+}
+
+#review_title {
+    margin-left: 20px;
+    text-align: left;
+}
+
+#second_tbl_tr {
+    border: 1px solid grey;
+}
+
+#review_submit {
+    text-align: right;
+}
+
+#edit {
+    padding-top: 20px;
+}

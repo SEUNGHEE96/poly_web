@@ -55,7 +55,7 @@ function renderHTML() {
                 본 작품은 12세 미만의 청소년이 열람하기에 부적절한 내용을 포함하고 있습니다. 보호자의 지도 하에 작품을 감상해주시기 바랍니다.</div>
             <hr />
 
-            <b>1화 소장: 쿠키 2개 대여 : 쿠키 1개 <img id="cookie" src="assets/images/cookie.png"></b>
+            <b>소장: 쿠키 2개<img id="cookie" src="assets/images/cookie.png"></b>
         </div>
         `;
     document.getElementById("json").innerHTML = htmlString;

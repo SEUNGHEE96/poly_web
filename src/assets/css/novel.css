@@ -7,22 +7,19 @@
 #json {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #detail {
-    width: 63%;
-    height: 430px;
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 #novelimg {
-    margin: 0 auto;
+    margin-left: 10px;
+    margin-right: 30px;
     width: 250px;
-}
-
-#title {
-    width: 37%;
 }
 
 #likenum {
@@ -108,10 +105,6 @@ b {
     border-color: #f0f0f0;
     background: #e3e3e3;
     text-align: right;
-}
-
-#xxx {
-    color: red;
 }
 
 #review_title {

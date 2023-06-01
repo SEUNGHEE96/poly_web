@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: lightgray;
+        }
+
+        tr.checked,
+        tr.checked:nth-child(odd) td {
+            background-color: blanchedalmond;
+        }
+
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            width: 1000px;
+        }
+
+        tr {
+            height: 40px;
+        }
+
+        td {
+            border: 2px solid white;
+            text-align: left;
+        }
+
+        td:not(:last-child) {
+            text-align: center;
+            width: 50px;
+        }
+
+        td:last-child {
+            padding-left: 10px;
+        }
+
+        .selected {
+            cursor: move;
+        }
+
+        button {
+            width: 35px;
+            height: 35px;
+            margin: 5px;
+            background-color: white;
+            border: 0.5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll()"></th>
+                <th>id</th>
+                <th>타이틀</th>
+            </tr>
+        </thead>
+        <tbody id="result"></tbody>
+    </table>
+
+    <div id="pagination"></div>
+
+    <script>
+        // 페이지 네이션
+        function showPage(pageNum) {
+            const startIndex = (pageNum - 1) * 10;
+            const endIndex = startIndex + 10;
+            fetch('forum.json')
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not OK');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    createPagination(data);
+                    renderHTML(data, startIndex, endIndex);
+                })
+                .catch((error) => {
+                    console.log('Error:', error);
+                });
+        }
+
+        // 시작시 1페이지 띄우기
+        showPage(1);
+
+        // 페이지네이션 버튼 만들기
+        function createPagination(forums) {
+            const numPages = Math.ceil(forums.length / 10);
+            let paginationHTML = "";
+            for (let i = 1; i <= numPages; i++) {
+                paginationHTML += `<button onclick="showPage(${i})">${i}</button>`;
+            }
+            document.getElementById("pagination").innerHTML = paginationHTML;
+        }
+
+        // ajax
+        function renderHTML(forums, startIndex, endIndex) {
+            let htmlString = "";
+            for (let i = startIndex; i < endIndex && i < forums.length; i++) {
+                let content = forums[i];
+                htmlString += `
+                    <tr class="row">
+                        <td><input type="checkbox" onchange="toggleBackgroundColor(this)"></td>
+                        <td>${content.id}</td>                        
+                        <td>${content.title}</td>
+                    </tr>
+                `;
+            }
+            document.getElementById("result").innerHTML = htmlString;
+
+            // 체크박스 이벤트 처리
+            const selectAllCheckbox = document.getElementById("selectAllCheckbox");
+            const checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+            selectAllCheckbox.addEventListener("change", function () {
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.checked = selectAllCheckbox.checked;
+                    toggleBackgroundColor(checkbox);
+                });
+            });
+
+            // 선택된 체크박스 초기화
+            checkboxes.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                    toggleBackgroundColor(checkbox);
+                    checkbox.parentNode.parentNode.setAttribute("draggable", true);
+                }
+            });
+
+            // 드래그 앤 드롭 이벤트 처리
+            const rows = document.querySelectorAll(".row");
+            rows.forEach(function (row) {
+                row.addEventListener("dragstart", dragStart);
+                row.addEventListener("dragover", dragOver);
+                row.addEventListener("dragend", dragEnd);
+            });
+        }
+
+        // 체크박스 선택시 배경화면 변경
+        function toggleBackgroundColor(checkbox) {
+            const row = checkbox.parentNode.parentNode;
+            if (checkbox.checked) {
+                row.classList.add("checked");
+                row.setAttribute("draggable", true);
+            } else {
+                row.classList.remove("checked");
+                row.setAttribute("draggable", false);
+            }
+        }
+
+        // 이하는 수업시간에 진행했던 실습 코드
+        let draggedElement = null;
+        let prevIndex = null;
+
+        function dragStart(e) {
+            draggedElement = e.target;
+            prevIndex = Array.from(draggedElement.parentNode.children)
+                .indexOf(draggedElement);
+            e.dataTransfer.effectAllowed = "move";
+            e.dataTransfer.setData("text/html", draggedElement.innerHTML);
+            draggedElement.classList.add("dragging");
+        }
+
+        function dragOver(event) {
+            event.preventDefault();
+            event.dataTransfer.dropEffect = "move";
+            const targetElement = event.target.closest("tr");
+            if (targetElement && targetElement !== draggedElement) {
+                const currentIndex = Array.from(targetElement.parentNode.children).indexOf(targetElement);
+                if (currentIndex > prevIndex) {
+                    targetElement.parentNode.insertBefore(draggedElement, targetElement.nextSibling);
+                } else {
+                    targetElement.parentNode.insertBefore(draggedElement, targetElement);
+                }
+                prevIndex = currentIndex;
+            }
+        }
+
+        function dragEnd(event) {
+            draggedElement.classList.remove("dragging");
+            draggedElement = null;
+            prevIndex = null;
+        }
+    </script>
+</body>
+
+</html>

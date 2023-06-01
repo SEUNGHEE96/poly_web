@@ -79,7 +79,7 @@
         function showPage(pageNum) {
             const startIndex = (pageNum - 1) * 10;
             const endIndex = startIndex + 10;
-            fetch('forum.json')
+            fetch('assets/json/forum.json')
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error('Network response was not OK');
